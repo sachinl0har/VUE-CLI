@@ -36,9 +36,9 @@ export default {
     deletePost(id) {
       axios
         .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        .then(res => {
-          this.posts = this.posts.filter(post => post.id !== id);
-        })
+        .then(
+          this.posts = this.posts.filter(post => post.id !== id)
+        )
         .catch(err => console.log(err));
     }
   },
